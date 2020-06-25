@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+	<title>Ang js app</title>
+	<script src="angular.min.js"></script> 
+	<script src="script.js"></script>
+	<style>
+		body
+		{
+			font-size:1.2em;
+		}
+	</style>
+</head>
+<body>
+	<h1>Expressions and interpolation</h1>
+	<div ng-controller="control">
+		message is : <br>
+		{{name}} <br>
+		{{saymsg()}}
+		<br>
+		{{name}} has a msg for you : <br>
+		{{ukhbjkhbj}}
+		{{saymsg()}}
+
+		<div>
+			<button ng-click="change()">Change pic</button> <br>
+			Cost: {{ cost | currency : "#bro" : 4}}
+			<br>
+			<img ng-src="pic_{{state}}.jpg" width="700px" height="500px">
+		</div>
+	</div>
+
+</body>
+</html>
