@@ -1,0 +1,36 @@
+body
+{
+	color:#fff; 
+	background-color: #61122f;
+	font-family: 'Oxygen', sans-serif;
+}
+
+h1
+{
+	text-align: center;
+	margin-top:70px;
+	margin-bottom: 50px
+}
+
+a
+{
+	color: #1DD8E6;
+}
+
+
+li[ui-sref]
+{
+	text-decoration:underline; 
+	color: #1DD8E6;
+}
+
+li[ui-sref]:hover
+{
+	cursor:pointer;	
+}
+
+h3
+{
+	margin-left: 15px;
+	text-decoration: underline;
+}
