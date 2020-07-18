@@ -1,0 +1,37 @@
+<div class="container">
+	<h1 style="margin-bottom: 40px; text-align: center;">My Details</h1>
+
+	<div ng-show="!info.show" style="text-align: center; font-size: 1.3em">
+		Not Signed Up Yet.
+		<a ui-sref="public.signup" style="text-decoration: underline; color: #1DD8E6;"> Sign up Now!</a>
+	</div>
+
+	<div ng-show="info.show" style="text-align: center; font-size: 1.2em">
+		<span class="info">First Name : </span>{{info.userDetails[0].firstname}} <br>
+
+		<span class="info">Last Name : </span>{{info.userDetails[0].lastname}} <br>
+
+		<span class="info">Email : </span>{{info.userDetails[0].email}} <br>
+		<span class="info">Phone : </span>{{info.userDetails[0].phone}} <br>
+
+		<span class="info">Fav menu item : </span>{{info.userDetails[0].favfood}} <br>
+
+		<span class="info">Fav menu item details : </span><br>
+		
+		<div ng-hide="info.userDetails[0].error">
+			<img class="img-responsive" width="250" height="150" ng-src="{{info.basePath}}/images/{{info.userDetails[0].favfoodsn}}.jpg" alt="img" style="
+				display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  margin-top: 15px">
+			<span class="info">Title : </span> {{info.userDetails[0].name}} <br>
+			<div style="margin-left: 30%; margin-right: 30%"><span class="info">Description : </span>{{info.userDetails[0].favfooddesc}}</div>
+		</div>
+
+		<div ng-show="info.userDetails[0].error">
+			No such menu number({{info.userDetails[0].favfood}}) exists!!
+		</div>
+	</div>
+
+
+</div>
